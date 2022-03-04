@@ -17,7 +17,7 @@ export class TitleComponent implements OnInit,OnChanges, OnDestroy {
     // console.log("Alterado com sucesso!");
 
   }
-  ngOnDestroy(): void { //é chamada quando um conteudo do componente ou o proprio componente
+  ngOnDestroy(): void { //é chamada quando um conteudo do componente ou o próprio componente
     console.log("Destruido");
 
   }

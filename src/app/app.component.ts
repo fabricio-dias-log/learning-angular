@@ -3,12 +3,13 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
-    {{ valor }}
+    <!-- {{ valor }}
     <button (click)="adicionar()">Adicionar</button>
     <br>
     <app-title *ngIf="destruir"></app-title>
     <br>
-    <button (click)="destruirComponente()">Destruir Componente</button>
+    <button (click)="destruirComponente()">Destruir Componente</button> -->
+    <app-data-binding></app-data-binding>
     <router-outlet></router-outlet>
     `, // verifica se tem rotas definidas no angular e carrega o que tiver na pagina
 })
