@@ -9,7 +9,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <app-title *ngIf="destruir"></app-title>
     <br>
     <button (click)="destruirComponente()">Destruir Componente</button> -->
-    <app-data-binding></app-data-binding>
+    <!-- <app-data-binding></app-data-binding> -->
+    <app-diretivas-estruturais></app-diretivas-estruturais>
     <router-outlet></router-outlet>
     `, // verifica se tem rotas definidas no angular e carrega o que tiver na pagina
 })

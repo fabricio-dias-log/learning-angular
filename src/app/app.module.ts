@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { Title2Component } from './title2/title2.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     AppComponent,
     TitleComponent,
     Title2Component,
-    DataBindingComponent
+    DataBindingComponent,
+    DiretivasEstruturaisComponent
   ],
   imports: [
     BrowserModule,
