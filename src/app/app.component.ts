@@ -13,8 +13,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
 
     <app-diretivas-atributos>
-      <h1>Aulas de Diretivas de Atributo</h1>
-      <h3>Final da Aula</h3>
+      <!-- <h1>Aulas de Diretivas de Atributo</h1>
+      <h3>Final da Aula</h3> -->
     </app-diretivas-atributos>
 
     <router-outlet></router-outlet>
