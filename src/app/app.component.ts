@@ -16,7 +16,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
       <h1>Aulas de Diretivas de Atributo</h1>
       <h3>Final da Aula</h3>
     </app-diretivas-atributos>
-
+    <app-new-component></app-new-component>
     <router-outlet></router-outlet>
     `, // verifica se tem rotas definidas no angular e carrega o que tiver na pagina
 })
