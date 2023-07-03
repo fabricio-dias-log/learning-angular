@@ -1,2 +1,9 @@
-<p [ngClass]="{'active': valor, 'disabled': !valor}">NgClass</p>
-<p [ngStyle]="{'height': altura, 'background': backgroundColor}">NgStyle</p>
+<div *ngIf="nome != 'Fabricio'">
+  <p [ngClass]="{'active': valor, 'disabled': !valor}">NgClass</p>
+  <p [ngStyle]="{'height': altura, 'background': backgroundColor}">NgStyle</p>
+</div>
+<hr>
+<input [(ngModel)]="nome">
+<button (click)="addToList()">Adicionar</button>
+
+<li *ngFor="let item of list">{{item.nome}}</li>
