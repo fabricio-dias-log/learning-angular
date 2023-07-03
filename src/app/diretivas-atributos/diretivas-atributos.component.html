@@ -1,13 +1,20 @@
+<ng-content select="h1"></ng-content>
+<hr>
 <div *ngIf="nome != 'Fabricio'">
   <p [ngClass]="{'active': valor, 'disabled': !valor}">NgClass</p>
   <p [ngStyle]="{'height': altura, 'background': backgroundColor}">NgStyle</p>
 </div>
+
 <hr>
 <input [(ngModel)]="nome">
 <button (click)="addToList()">Adicionar</button>
 
 <li *ngFor="let item of list">{{item.nome}}</li>
+
 <hr>
 <ng-template ngFor let-item [ngForOf]="list">
   <p>{{item.nome}}</p>
 </ng-template>
+
+
+<ng-content select="h3"></ng-content>
