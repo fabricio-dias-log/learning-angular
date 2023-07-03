@@ -7,3 +7,7 @@
 <button (click)="addToList()">Adicionar</button>
 
 <li *ngFor="let item of list">{{item.nome}}</li>
+<hr>
+<ng-template ngFor let-item [ngForOf]="list">
+  <p>{{item.nome}}</p>
+</ng-template>
