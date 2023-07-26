@@ -12,11 +12,17 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <!-- <app-data-binding></app-data-binding> -->
     <!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
 
-    <app-diretivas-atributos>
+    <!-- <app-diretivas-atributos>
       <h1>Aulas de Diretivas de Atributo</h1>
       <h3>Final da Aula</h3>
     </app-diretivas-atributos>
     <app-new-component></app-new-component>
+    <app-input [contador]="addValue">
+    </app-input>
+    <br>
+    <button (click)="add()">ADD</button>
+    <hr> -->
+    <app-output></app-output>
     <router-outlet></router-outlet>
     `, // verifica se tem rotas definidas no angular e carrega o que tiver na pagina
 })
@@ -24,7 +30,13 @@ export class AppComponent implements OnInit, DoCheck, AfterContentChecked, After
   public valor: number = 1;
   public destruir: boolean = true;
 
+  public addValue: number = 1;
+
   constructor() { }
+
+  public add(): void{
+    this.addValue += 1;
+  }
 
   public adicionar(): number{
     return this.valor += 1;
