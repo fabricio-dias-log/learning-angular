@@ -8,8 +8,6 @@ import { TitleComponent } from './title/title.component';
 import { Title2Component } from './title2/title2.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
-import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
-import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -18,14 +16,12 @@ import { SharedModule } from './shared/shared.module';
     TitleComponent,
     Title2Component,
     DataBindingComponent,
-    DiretivasEstruturaisComponent,
-    DiretivasAtributosComponent
+    DiretivasEstruturaisComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    SharedModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
