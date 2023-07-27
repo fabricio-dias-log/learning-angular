@@ -10,7 +10,23 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <br>
     <button (click)="destruirComponente()">Destruir Componente</button> -->
     <!-- <app-data-binding></app-data-binding> -->
-    <app-diretivas-estruturais></app-diretivas-estruturais>
+    <!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
+
+    <!-- <app-diretivas-atributos>
+      <h1>Aulas de Diretivas de Atributo</h1>
+      <h3>Final da Aula</h3>
+    </app-diretivas-atributos>
+    <app-new-component></app-new-component>
+    <app-input [contador]="addValue">
+    </app-input>
+    <br>
+    <button (click)="add()">ADD</button>
+    <hr> -->
+    <ng-template [ngIf]="getDados">
+      <h2>{{ getDados.nome }}</h2>
+      <h2>{{ getDados.idade }}</h2>
+    </ng-template>
+    <app-output (enviarDados)="setDados($event)"></app-output>
     <router-outlet></router-outlet>
     `, // verifica se tem rotas definidas no angular e carrega o que tiver na pagina
 })
@@ -18,7 +34,14 @@ export class AppComponent implements OnInit, DoCheck, AfterContentChecked, After
   public valor: number = 1;
   public destruir: boolean = true;
 
+  public addValue: number = 1;
+  public getDados: {nome: string, idade: number} | undefined;
+
   constructor() { }
+
+  public add(): void{
+    this.addValue += 1;
+  }
 
   public adicionar(): number{
     return this.valor += 1;
@@ -28,14 +51,19 @@ export class AppComponent implements OnInit, DoCheck, AfterContentChecked, After
     this.destruir = false;
   }
 
-  ngOnInit(): void { //adicionar eventos ou funcionalidades ao iniciar a aplicação
+
+  public setDados(event: {nome: string, idade: number}):void {
+    this.getDados = event;
+  }
+
+  ngOnInit(): void { //adicionar eventos ou funcionalidades ao iniciar a aplicaï¿½ï¿½o
     setTimeout(() => {
       console.log("teste");
 
     }, 5000);
   }
 
-  ngDoCheck(): void { // vai verificar se há alterações em dados no componente
+  ngDoCheck(): void { // vai verificar se hï¿½ alteraï¿½ï¿½es em dados no componente
      console.log("ngDoCheck");
   }
 
@@ -44,13 +72,13 @@ export class AppComponent implements OnInit, DoCheck, AfterContentChecked, After
         //Add 'implements AfterContentInit' to the class.
         console.log("ngAfterContentInit");
   }
-  ngAfterContentChecked(): void { // é chamado sempre que há alteração no conteúdo
+  ngAfterContentChecked(): void { // ï¿½ chamado sempre que hï¿½ alteraï¿½ï¿½o no conteï¿½do
       console.log("ngAfterContentChecked");
   }
   ngAfterViewInit(): void {
       console.log("ngAfterViewInit");
   }
-  ngAfterViewChecked(): void { //é chamado quando a alteração é carregada na view/componente
+  ngAfterViewChecked(): void { //ï¿½ chamado quando a alteraï¿½ï¿½o ï¿½ carregada na view/componente
     //Called after every check of the component's view. Applies to components only.
     //Add 'implements AfterViewChecked' to the class.
     console.log("ngAfterViewChecked");
